@@ -1,0 +1,41 @@
+import random
+
+if __name__ == '__main__':
+    print("To play type: 'Stone' or 'Paper' or 'Scissor'")
+    print("To see score type: 'Show Score'")
+    A = ["Stone", "Paper", "Scissor"]
+    C=0
+    Y=0
+    t=0
+    while t==0:
+        i = random.choice(A)
+        y = str(input())
+        if i==y:
+            print("Draw")
+        if y == 'Stone':
+            if i == 'Paper':
+                print('Computer Wins')
+                C=C+1
+            if i == 'Scissor':
+                print('You Win!!')
+                Y=Y+1
+
+        if y == 'Paper':
+            if i == 'Scissor':
+                print('Computer Wins')
+                C = C + 1
+            if i == 'Stone':
+                print('You Win!!')
+                Y = Y + 1
+
+        if y == 'Scissor':
+            if i == 'Stone':
+                print('Computer Wins')
+                C = C + 1
+            if i == 'Paper':
+                print('You Win!!')
+                Y = Y + 1
+
+        if y == 'Show Score':
+            print("Computer : You")
+            print("   " + str(C) + "     :  " + str(Y))
